@@ -50,11 +50,10 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func add(_ sender: UIBarButtonItem) {
-        //change this method
         //Alert manager with two fields
         tableView.reloadData()
     }
-    
+    		
 }
 
 extension SecondViewController: SecondViewControllerDelegate{
@@ -83,7 +82,7 @@ extension SecondViewController: UITableViewDelegate, UITableViewDataSource{
         cell.id = item.id ?? 0
         cell.titleLabel.text = item.title
         cell.subTitleLabel.text = item.deadLine
-        
+        	
         cell.editCallback = { id in
             self.editItem(id)
         }
